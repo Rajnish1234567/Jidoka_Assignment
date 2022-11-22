@@ -8,7 +8,7 @@ import java.io.InputStream;
 import java.net.URL;
 import javax.imageio.ImageIO;
 
-public class Multithreading{
+public class Multithreading implements Runnable{
 	
     public static void main(String[] args) throws IOException {
     	
@@ -41,18 +41,33 @@ public class Multithreading{
                 cur_img++;
             }
         }
+        File file=new File("abc");
+        if(!file.exists()) {
+        	file.mkdir();
+        	System.out.println("Created directory");
+        }
+        else {
+        	System.out.println("File already exists");
+        }
 
         for (int i = 0; i <imgs.length; i++)
         {
-//            File outputFile = new File("img" + i + ".jpg");
-            try {
-				ImageIO.write(imgs[i], "jpg", new File("C://Users"));
-			} catch (IOException e) {
+			try {
+				File output = new File("abc/img" + i + ".jpg");
+				ImageIO.write(imgs[i], "jpg", output);
+			} catch (Exception e) {
 				e.printStackTrace();
 			}
         }
         System.out.println("Sub-images have been created.");
     }
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+
 
 	
 }
