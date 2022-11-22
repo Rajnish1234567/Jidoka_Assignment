@@ -3,13 +3,14 @@ package com.inheritence;
 public class Main {
 
 	public static void main(String[] args) {
-		Human e1= new Employee(1,"ram","patna",10000);
-		e1.showDetails();
+		System.out.println("Using child class reference and child class object");
+		Students s1= new Students();
+		s1.show();
+		s1.run();
 		
-		Employee e2= new Employee(1,"ram","patna",10000);
-		e1.showDetails();
-		
-		Human h1= new Human(1,"ram","patna");
-		h1.showDetails();
+		System.out.println("Using super class reference and child class object");
+		Human h1= new Students();
+		h1.show();
+		h1.run();
 	}
 }

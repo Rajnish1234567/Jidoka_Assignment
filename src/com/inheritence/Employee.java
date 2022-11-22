@@ -9,10 +9,13 @@ public class Employee extends Human{
 		this.salary=salary;
 	}
 	
+	public Employee() {
+		super();
+	}
+
 	@Override
-	public void showDetails() {
-		System.out.println("Employee Details");
-		System.out.println("id = "+id +"name = "+name+ " address = "+address +"Salary = "+salary);
+	public void show(){
+		System.out.println("Inside employee class");
 	}
 	
 }

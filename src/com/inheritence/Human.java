@@ -5,14 +5,23 @@ public class Human {
 	String name;
 	String address;
 	
-	Human(int id,String name, String address){
-	this.id=id;
-	this.name=name;
-	this.address=address;
+	
+	public Human() {
+		super();
 	}
 
-	public void showDetails() {
-		System.out.println("id = "+id +", name =" +name + ", address = "+address );
+	public Human(int id,String name, String address){
+		super();
+		this.id=id;
+		this.name=name;
+		this.address=address;
+	}
+
+	public void run() {
+		System.out.println("Human is Running");
+	}
+	public void show() {
+		System.out.println("Inside parent method....");
 	}
 
 }

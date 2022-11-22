@@ -6,4 +6,5 @@
  *
  */
 module Jidoka_Assignment {
+	requires java.desktop;
 }
